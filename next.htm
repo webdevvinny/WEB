@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #see:checked {
+        color: #ff0000;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="password">Enter password: </label> <br />
+    <input type="password" name="pass" id="password" /> <br />
+    <label for="see">See Password: </label>
+    <input type="checkbox" name="box" id="see" />
+
+    <p>See Here Your Pass Word:</p>
+
+    <script>
+      let p = document.getElementById("see");
+
+      document.getElementById("see").onclick = function e() {
+        if (p.checked) {
+          document.querySelector("#password").type = "text";
+        } else {
+          document.querySelector("#password").type = "password";
+        }
+      };
+
+      e();
+    </script>
+  </body>
+</html>
